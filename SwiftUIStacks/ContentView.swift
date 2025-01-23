@@ -40,6 +40,8 @@ struct ContentView: View {
                     .background(Color(red: 255/255, green: 183/255, blue: 37/255))
                     .offset(x: 0, y: 110)
             }
+            
+            Spacer()
         }
     }
 }
@@ -50,14 +52,18 @@ struct ContentView: View {
 
 struct HeaderView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text("Choose")
-                .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
-            Text("Your Plan")
-                .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
+        HStack {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Choose")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.black)
+                Text("Your Plan")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.black)
+            }
+            Spacer()
         }
+        .padding()
     }
 }
 
